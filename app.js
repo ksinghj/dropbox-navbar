@@ -20,9 +20,11 @@ function changeButton(e) {
   if (window.scrollY > 50) {
     button.classList.add("active", "has-shadow");
     navbar.classList.add("active");
+    navbar.classList.add("has-shadow");
   } else {
     button.classList.remove("active");
     navbar.classList.remove("active");
+    navbar.classList.remove("has-shadow");
   }
   if (window.scrollY > 200) {
     button.classList.remove("active");
