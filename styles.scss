@@ -4,7 +4,15 @@
   box-sizing: border-box;
 }
 // variables
+$colors: (
+  primary: #1593ff,
+  primary-light: lighten(#1593ff, 40%),
+  primary-dark: darken(#1593ff, 10%)
+);
 // mixins
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
 
 .container {
   section.navbar {
@@ -24,9 +32,9 @@
     }
     .nav-button,
     .button {
-      color: #1593ff;
+      color: color(primary);
       background: #b3d6f0;
-      border: 1px solid #1593ff;
+      border: 1px solid color(primary);
       border-radius: 5px;
       padding: 0.5em 1em;
       font-size: 14px;
@@ -41,10 +49,16 @@
       border-color: rgba(128, 128, 128, 0.651);
       background: white;
     }
+    .button.active:hover {
+      border-color: color(primary);
+    }
     button.active-second {
-      background: #1593ff;
+      background: color(primary);
       color: white;
-      border-color: #1593ff;
+      border-color: color(primary);
+    }
+    .button.active-second:hover {
+      background-color: color(primary-dark);
     }
   }
   section.navbar.active {
