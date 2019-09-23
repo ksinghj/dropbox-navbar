@@ -32,6 +32,11 @@
       font-size: 14px;
       transition: ease-in-out 200ms;
     }
+    .button:hover,
+    .button.active:hover,
+    .button-active-second:hover {
+      cursor: pointer;
+    }
     .button.active {
       border-color: rgba(128, 128, 128, 0.651);
       background: white;

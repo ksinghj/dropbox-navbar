@@ -44,6 +44,12 @@
   transition: ease-in-out 200ms;
 }
 
+.container section.navbar .button:hover,
+.container section.navbar .button.active:hover,
+.container section.navbar .button-active-second:hover {
+  cursor: pointer;
+}
+
 .container section.navbar .button.active {
   border-color: rgba(128, 128, 128, 0.651);
   background: white;
